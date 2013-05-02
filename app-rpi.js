@@ -8,6 +8,7 @@ app.route('/').file(__dirname + '/client/index.html');
 app.route('/*').files(__dirname + '/client');
 app.httpServer.listen(8000)
 
+var freq = 4000
 
 var getFrame = function() {
   setTimeout(function() {
@@ -24,7 +25,7 @@ var getFrame = function() {
         getFrame();
       })      
     });
-    }, 4000);
+    }, freq);
 };
 
 
