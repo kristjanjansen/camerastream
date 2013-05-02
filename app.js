@@ -14,10 +14,10 @@ var getFrame = function() {
   setTimeout(function() {
     var frame = spawn(
       '/usr/bin/streamer', 
-      ['-t', '2', '-o', 'data/frame00.jpeg']
+      ['-t', '2', '-o', './data/frame00.jpeg']
     )
     frame.on('close', function (code) {
-      fs.readFile('data/frame01.jpeg', function(err, file) {
+      fs.readFile('./data/frame01.jpeg', function(err, file) {
         app.sockets.emit('frames', { frame: "data:image/jpeg;base64," + file.toString('base64')});        
         getFrame();
       })      
