@@ -1,0 +1,15 @@
+{
+  "name": "ak_camera",
+  "version": "0.0.1",
+  "dependencies": {
+    "tako": "0.3.x",
+    "socket.io": "0.9.x"
+  }
+  "volo": {
+    "baseUrl": "client/vendor",
+    "dependencies": {
+      "jquery": "github:jquery/jquery/1.9.0",
+      "socket.io-client": "github:LearnBoost/socket.io-client/0.9.11"
+    }
+  }
+}
