@@ -8,5 +8,6 @@ volo install
 
 ## Running
 
-1. Run either ```node app.js```
-2. Point the browser to http://localhost:8000
+1. Run
+  ```node app.js```
+2. Point the browser to [http://localhost:8000](http://localhost:8000)
