@@ -16,14 +16,14 @@ var getFrame = function() {
       '/usr/bin/streamer', 
       ['-t', '2', '-o', 'data/frame00.jpeg']
     )
-    frame.stderr.on('data', function (data) {
-      console.log(data.toString());
-    });
     frame.on('close', function (code) {
       fs.readFile('data/frame01.jpeg', function(err, file) {
         app.sockets.emit('frames', { frame: "data:image/jpeg;base64," + file.toString('base64')});        
         getFrame();
       })      
+    });
+    frame.stderr.on('data', function (data) {
+      console.log(data.toString());
     });
     }, freq);
 };
